@@ -1,0 +1,26 @@
+<h1> Create a new manufactuere </h1>
+
+<%= form_for [@manufacturer] do |f| %>
+<%if @manufacturer.errors.any? %>
+<ul>
+  <% @manufacturer.errors.full_messages.each do |msg|%>
+  <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<div>
+  <%= f.label :name %>
+  <%= f.text_area :name %>
+</div>
+
+<div>
+  <%= f.label :country %>
+  <%= f.text_field :country %>
+</div>
+
+<div>
+  <%= f.submit "Submit" %>
+</div>
+
+<% end %>

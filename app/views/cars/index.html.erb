@@ -1,0 +1,15 @@
+<h1> Cars </h1>
+
+<%= link_to "Add A New Car", new_car_path(@car) %>
+<div>&nbsp;</div>
+<%= link_to "Manufacturers", manufacturers_path(@manufacturer) %>
+<div>&nbsp;</div>
+<%= link_to "Add A New Manufacturer", new_manufacturer_path(@manufacturer) %>
+
+
+<% @cars.each do |car| %>
+<h3><%= link_to car.id, car_path(car.id) %></h3>
+
+<div>&nbsp;</div>
+
+<% end %>
